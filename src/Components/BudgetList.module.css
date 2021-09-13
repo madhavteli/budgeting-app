@@ -1,0 +1,15 @@
+.budgetItem{
+	box-shadow: #4b4b4b;
+}
+
+.budgetItem span{
+	padding: 0 5% 0 0%;
+}
+
+.budgetItem button {
+	background: transparent;
+	border: none;
+	color: #666;
+	fontSize: 1rem;
+	padding: 12px;
+}

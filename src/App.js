@@ -5,10 +5,6 @@ import Sidebar from "./Components/Sidebar";
 import AddBudget from "./Components/AddBudget";
 import BudgetList from "./Components/BudgetList";
 
-const hhhhh = {
-	width: '75%'
-}
-
 function App() {
 	const [budgeted, setBudgeted] = useState(0);
 	const [BudgetItems, setBudgetItems] = useState([]);
@@ -37,14 +33,16 @@ function App() {
 	return (
 		<Fragment>
 			<Navbar/>
-			<Sidebar budgeted={budgeted}/>
-			<div style={hhhhh}>
-				<AddBudget onAddBudgetFormSave={onAddBudgetFormSave}/>
-				<div>
-					{BudgetItems.length === 0 && <span>Add a budget to get started</span>}
-					{BudgetItems.length > 0 && BudgetItems.map(createBudgetList)}
-				</div>
-			</div>
+			<main>
+				<Sidebar budgeted={budgeted}/>
+				<section>
+					<AddBudget onAddBudgetFormSave={onAddBudgetFormSave}/>
+					<div>
+						{BudgetItems.length === 0 && <span>Add a budget to get started</span>}
+						{BudgetItems.length > 0 && BudgetItems.map(createBudgetList)}
+					</div>
+				</section>
+			</main>
 		</Fragment>
 	);
 };

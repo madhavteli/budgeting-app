@@ -1,0 +1,25 @@
+.negativeUnbudget{
+	color: brown;
+}
+
+.asideStyle{
+	width: 25%;
+	height: 100%;
+	float: left;
+	padding-left: 20px;
+	margin-right: 20px;
+	border-right: 1px solid #ccc;
+}
+
+.asideStyle input{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	padding: 4px 10px 0 0;
+	transition: border-bottom-color 0.25s ease-out;
+	margin: 1px 10px 0 4px;
+}
+
+.asideStyle span{
+	transition: border-bottom-color 0.25s ease-out;
+}

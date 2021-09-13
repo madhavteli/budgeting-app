@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import classes from './AddBudget.module.css';
 
 const AddBudget = props => {
 	const [userInput, setUserInput] = useState({
@@ -12,11 +13,13 @@ const AddBudget = props => {
 	};
 	const formSaveHandler = (event) => {
 		event.preventDefault();
+		const { name, amount } = userInput;
+		if (name == '' || amount =='') return;
 		props.onAddBudgetFormSave(userInput);
 		setUserInput({name: '', amount: ''});
 	};
 	return(
-		<form onSubmit={formSaveHandler}>
+		<form onSubmit={formSaveHandler} className={classes.formStyle}>
 			<input type='text' name='name' value={userInput.name} onChange={inputChangeHandler} placeholder='Name'/>
 			<input type='number' name='amount' value={userInput.amount} onChange={inputChangeHandler} min='0' max='100000' placeholder='$ Amount'/>
 			<button type='submit'>+ Add</button>
