@@ -1,25 +1,38 @@
-.negativeUnbudget{
+.negativeUnbudget {
 	color: brown;
 }
 
-.asideStyle{
-	width: 25%;
-	height: 100%;
-	float: left;
-	padding-left: 20px;
-	margin-right: 20px;
+.asideStyle {
+	width: 22%;
+	min-width: 200px;
+	background: white;
 	border-right: 1px solid #ccc;
+	padding: 16px 24px;
+	font-size: 1.25rem;
+	font-weight: normal;
 }
 
-.asideStyle input{
+.asideStyle input {
+	width: 90%;
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #ccc;
-	padding: 4px 10px 0 0;
+	padding: 4px 10px 0 16px;
 	transition: border-bottom-color 0.25s ease-out;
 	margin: 1px 10px 0 4px;
+	font-size: 1.25rem;
+	font-weight: normal;
 }
 
-.asideStyle span{
+.asideStyle span {
 	transition: border-bottom-color 0.25s ease-out;
+	position: absolute;
+	padding-top: 5px;
+	padding-left: 4px;
+}
+
+.asideStyle h2 {
+	font-size: 1.52rem;
+	font-weight: normal;
+	margin-bottom: 8px;
 }

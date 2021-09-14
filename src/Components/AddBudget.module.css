@@ -1,16 +1,33 @@
 .formStyle{
+	background: white;
+	display: flex;
+	align-items: flex-end;
 	padding: 16px;
 }
 
 .formStyle input{
+	width: 100%;
+	font-size: 1.2rem;
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #ccc;
-	padding: 4px 10px;
 	transition: border-bottom-color 0.25s ease-out;
-	margin: 1px 10px;
+
 }
 
 .formStyle button{
-	background: rgb(88, 214, 141); border: none; color: white; font-size: 14px; padding: 8px;
+	background: rgb(88, 214, 141);
+	border: none;
+	color: white;
+	font-size: 14px;
+	padding: 5px;
+	margin-left: 8px;
+}
+
+.formRow{
+	border-bottom-color: DODGERBLUE;
+	outline: none;
+	flex: 1;
+	padding-left: 8px;
+	padding-right: 8px;
 }

@@ -5,6 +5,8 @@ import Sidebar from "./Components/Sidebar";
 import AddBudget from "./Components/AddBudget";
 import BudgetList from "./Components/BudgetList";
 
+import classes from './App.module.css';
+
 function App() {
 	const [budgeted, setBudgeted] = useState(0);
 	const [BudgetItems, setBudgetItems] = useState([]);
@@ -33,12 +35,12 @@ function App() {
 	return (
 		<Fragment>
 			<Navbar/>
-			<main>
+			<main className={classes.mainStyle}>
 				<Sidebar budgeted={budgeted}/>
-				<section>
+				<section className={classes.sectionStyle}>
 					<AddBudget onAddBudgetFormSave={onAddBudgetFormSave}/>
-					<div>
-						{BudgetItems.length === 0 && <span>Add a budget to get started</span>}
+					<div className={classes.listStyle}>
+						{BudgetItems.length === 0 && <span className={classes.addBudgetToStart}>Add a budget to get started</span>}
 						{BudgetItems.length > 0 && BudgetItems.map(createBudgetList)}
 					</div>
 				</section>
